@@ -1,15 +1,6 @@
-# Mini-C-compiler
-Mini C compiler for programming assignment  
-Dongguk University -  Computer Science & Engineering  
-Compiler Construction - CSE4035, Seman Oh
-
-
-
-## Mini C Grammar
-```
 DIRECTIVE       BUILD_TREES -> OFF;
                 LIST_STATES -> ON;
-
+                
 LEXICON         '%IDENT' => IDENT;
                 '%NUMBER' => NUMBER;
 
@@ -36,7 +27,7 @@ VAR_DEFS      -> VAR_DEF;
               -> VAR_DEFS VAR_DEF;
 VAR_DEF       -> TYPE VAR_LIST ';'                           => VAR_DEF;
 VAR_LIST      -> IDENT_LIST                                  => VAR_LIST;
-TYPE          -> '%IDENT'                                    => INT_VOID_TYPE;
+TYPE          -> '%IDENT'                                    => INT_VOID_TYPE; 
 IDENT_LIST    -> IDENTS;
               -> IDENT_LIST ',' IDENTS;
 IDENTS        -> '%IDENT';
@@ -53,7 +44,7 @@ STATEMENT     -> ASSIGNMENT_ST;
               -> JUMP_ST;                        
               -> NULL_ST;
               -> ;
-ASSIGNMENT_ST -> VARIABLE '=' EXP ';'                        => ASSIGN_STMT;
+ASSIGNMENT_ST -> VARIABLE '=' EXP ';'                        => ASSIGN_STMT; 
 EXPRESSION    -> EXP ';'                                     => EXPRESSION;     
 OPT_ACT_PARAM -> '(' ACTUAL_PARAMS ')'                       => ACTUAL_PARAM;
 ACTUAL_PARAMS -> EXP;
@@ -96,8 +87,7 @@ FACTOR        -> '!' FACTOR                                  => NEG;
               -> '(' EXP ')';
 VARIABLE      -> '%IDENT';
               -> '%IDENT' '[' EXP ']'                        => INDEX;
-              -> POINTER '%IDENT'                            => POINTER;
+              -> POINTER '%IDENT'                            => POINTER; 
               -> '&' '%IDENT'                                => REFERENCE;
               -> '%IDENT' OPT_ACT_PARAM                      => CALL_STMT;
 POINTER       -> '*';
-```
