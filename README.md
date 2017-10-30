@@ -1,7 +1,7 @@
 # Mini-C-compiler
 Mini C compiler for programming assignment  
 Dongguk University -  Computer Science & Engineering  
-Compiler Construction - CSE4035, Seman Oh
+Compiler Construction - CSE4035, Professor Seman Oh
 
 
 
